@@ -1,50 +1,91 @@
-# backend_traevo
-traevo-backend/
-│
-├── app/
-│   ├── __init__.py
-│   ├── main.py                      # Aplicação FastAPI principal
-│   │
-│   ├── core/                        # Configurações centrais
-│   │   ├── __init__.py
-│   │   ├── config.py                # Variáveis de ambiente
-│   │   ├── security.py              # JWT, Bcrypt, Autenticação
-│   │   └── database.py              # Conexão Oracle
-│   │
-│   ├── models/                      # Modelos de Dados
-│   │   ├── __init__.py
-│   │   ├── database_models.py       # Modelos SQLAlchemy (Oracle)
-│   │   └── schemas.py               # Schemas Pydantic (Request/Response)
-│   │
-│   ├── repositories/                # Camada de Acesso a Dados
-│   │   ├── __init__.py
-│   │   ├── usuario_repository.py
-│   │   ├── transacao_repository.py
-│   │   ├── orcamento_repository.py
-│   │   ├── categoria_repository.py
-│   │   ├── tipo_renda_repository.py
-│   │   └── previsao_ia_repository.py
-│   │
-│   ├── services/                    # Lógica de Negócio
-│   │   ├── __init__.py
-│   │   ├── auth_service.py
-│   │   ├── usuario_service.py
-│   │   ├── transacao_service.py
-│   │   ├── orcamento_service.py
-│   │   └── ia_analysis_service.py   # Simulação de IA
-│   │
-│   └── api/                         # Endpoints REST
-│       ├── __init__.py
-│       ├── dependencies.py          # Injeção de dependências
-│       └── routers/
-│           ├── __init__.py
-│           ├── auth.py
-│           ├── user.py
-│           ├── transactions.py
-│           ├── budget.py
-│           └── dashboard.py
-│
-├── requirements.txt
-├── Dockerfile
-├── .env.example
-└── README.md
+# 🧠 Plataforma Financeira Inteligente — Backend (MVP)
+
+Backend do MVP da **TRAEVO**.  
+Projeto em fase inicial, focado na construção da lógica central do sistema.
+
+Este repositório faz parte de um projeto de portfólio com duração estimada de **2 meses**.
+
+---
+
+## 🎯 Objetivo do Backend
+
+Fornecer APIs REST responsáveis por:
+
+- Cadastro e autenticação de usuários  
+- Registro de transações financeiras  
+- Cálculo de status financeiro básico  
+- Gestão de orçamento e limites  
+- Base para previsões financeiras futuras (IA)
+
+---
+
+## ⚙️ Tecnologias (previstas)
+
+- Linguagem: **Python**
+- Framework: **REACT Native**  
+- Banco de Dados: **Oracle (FIAP)**
+- Arquitetura: **API REST**
+- Deploy: **Render** ou **Railway**
+
+---
+
+## 📂 Funcionalidades (MVP)
+
+### Usuários
+- Cadastro
+- Login
+- Dados básicos do perfil financeiro
+
+### Transações
+- Registro de receitas e despesas
+- Categoria, valor e data
+- Listagem e consulta
+
+### Orçamento
+- Definição de salário mensal
+- Sugestão inicial de divisão (fixo, lazer, poupança)
+- Limites por categoria
+
+### Alertas
+- Aviso ao ultrapassar limites de gastos
+- Status financeiro simples:
+  - Positivo
+  - Atenção
+  - Negativo
+
+---
+
+## 🧠 Inteligência (fase inicial)
+
+- Base para previsões de gastos futuros
+- Análise simples de comportamento financeiro
+- Estrutura preparada para evolução (IA, regressão, séries temporais)
+
+---
+
+## 🚧 Status do Projeto
+
+🔧 **Em desenvolvimento (fase inicial de MVP)**
+
+Funcionalidades, estrutura e tecnologias podem sofrer ajustes ao longo do desenvolvimento.
+
+---
+
+## 📌 Observações
+
+- Projeto com foco em **simplicidade, acessibilidade e clareza**
+- Pensado para usuários leigos e idosos
+- Backend prioriza regras de negócio e escalabilidade futura
+
+---
+
+## 📅 Próximos Passos
+
+- Definir stack final
+- Implementar autenticação
+- Criar endpoints principais
+- Conectar ao banco Oracle
+- Preparar base para integração com IA
+
+---
+
