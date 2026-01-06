@@ -1,5 +1,25 @@
+# === Segurança e Configurações Locais ===
 .env
-__pycache__/
-*.pyc
-venv/
+.env.local
 .vscode/
+.idea/
+
+# === Python e Ambientes Virtuais ===
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+.env/
+
+# === Distribuição e Builds ===
+dist/
+build/
+*.egg-info/
+
+# === Logs e Temporários ===
+*.log
+.pytest_cache/
+.coverage
+htmlcov/
